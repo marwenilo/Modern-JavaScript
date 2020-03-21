@@ -18,11 +18,18 @@ notes[2] = "this is now the new note 3"
 
 //callback function is just a function passed to function
 
-notes.forEach(function(item, index) {
-    console.log(index)
-    console.log(item)
-})
+// notes.forEach(function(item, index) {
+//     console.log(index)
+//     console.log(item)
+// })
 
 console.log(notes.length)
 console.log(notes)
 // console.log(notes[notes.length-1])
+
+
+//for loop
+for (let count = 0; count< notes.length; count++ ){
+    console.log(notes[count])
+
+}
