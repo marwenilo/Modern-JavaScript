@@ -66,21 +66,27 @@ body: 'Get a new seat'
 
 
 
-const  findNote = (notes, noteTitle) =>{
+// const  findNote = (notes, noteTitle) =>{
     
-   return notes.find( (note, index)=>{
-    return note.title.toLowerCase() === noteTitle.toLowerCase()
+//    return notes.find( (note, index)=>{
+//     return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+    
+//     }
+
+const findNotes = (notes,query)=>{
+    
+ return notes.filter((note,index)=> {
+        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+        return isTitleMatch || isBodyMatch
     })
-    
-    }
+  
+}
 
 
 
+console.log(findNotes(notes, 'work'))
 
-
-
-
-
-
-const note = findNote (notes,'office modification')
-console.log(note)
+// const note = findNote (notes,'office modification')
+// console.log(note)

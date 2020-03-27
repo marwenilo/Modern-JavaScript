@@ -26,13 +26,13 @@ const todos = [{
     completed:true
                     },{
     todo:"Eat",
-    completed:true
+    completed:false
                     },{
     todo:"Repeat",
     completed:true
                     },{
     todo:"And sometime you need to play ",
-    completed:true
+    completed:false
                     }]
 
 const deleteTodo=(todos,textTodo)=>{
@@ -49,6 +49,10 @@ const deleteTodo=(todos,textTodo)=>{
 }
 
 
+const completedTodo = todos.filter((todo,inedx)=> todo.completed === true)
+console.log(completedTodo)
 
-deleteTodo(todos, 'Sleep')
-console.log(todos)
+
+
+// deleteTodo(todos, 'Sleep')
+// console.log(todos)
