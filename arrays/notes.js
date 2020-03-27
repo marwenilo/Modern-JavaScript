@@ -1,5 +1,4 @@
 const notes = [{
-}, {
 title: 'My next trip',
 body: 'I would like to go ti Italie'
 }, {
@@ -33,8 +32,8 @@ body: 'Get a new seat'
 //     console.log(item)
 // })
 
-console.log(notes.length)
-console.log(notes)
+// console.log(notes.length)
+// console.log(notes)
 // console.log(notes[notes.length-1])
 
 
@@ -44,10 +43,44 @@ console.log(notes)
 
 // }
 
+
 // console.log(notes.indexOf({})) 
 
-const index = notes.findIndex( function(note, index){
- console.log(note)
- return note.title === 'Habbits to work on'
-})
-console.log(index)
+
+
+
+// const index = notes.findIndex( function(note, index){
+//  console.log(note)
+//  return note.title === 'Habbits to work on'
+// })
+// console.log(index)
+
+
+
+// const  findNote = (notes, noteTitle) =>{
+// const index =  notes.findIndex( (note, index)=>{
+// return note.title.toLowerCase() === noteTitle.toLowerCase()
+// })
+// return notes[index]
+// }
+
+
+
+const  findNote = (notes, noteTitle) =>{
+    
+   return notes.find( (note, index)=>{
+    return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
+    
+    }
+
+
+
+
+
+
+
+
+
+const note = findNote (notes,'office modification')
+console.log(note)
