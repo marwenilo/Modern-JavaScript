@@ -1,4 +1,14 @@
-const notes = ["Note 1", "Note 2", "Note 3"]
+const notes = [{
+}, {
+title: 'My next trip',
+body: 'I would like to go ti Italie'
+}, {
+title: 'Habbits to work on',
+body: 'Exercise. Eating a bit better'
+}, {
+title: 'Office modification',
+body: 'Get a new seat'
+}]
 
 // from the end of the arrays
 // console.log( notes.pop())
@@ -14,7 +24,7 @@ const notes = ["Note 1", "Note 2", "Note 3"]
 
 // notes.splice(1,1, "this is the new second item")
 
-notes[2] = "this is now the new note 3" 
+// notes[2] = "this is now the new note 3" 
 
 //callback function is just a function passed to function
 
@@ -29,7 +39,15 @@ console.log(notes)
 
 
 //for loop
-for (let count = 0; count< notes.length; count++ ){
-    console.log(notes[count])
+// for (let count = 0; count< notes.length; count++ ){
+//     console.log(notes[count])
 
-}
+// }
+
+// console.log(notes.indexOf({})) 
+
+const index = notes.findIndex( function(note, index){
+ console.log(note)
+ return note.title === 'Habbits to work on'
+})
+console.log(index)
