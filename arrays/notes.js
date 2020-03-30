@@ -1,5 +1,5 @@
 const notes = [{
-title: 'My next trip',
+title: 'mMy next trip',
 body: 'I would like to go ti Italie'
 }, {
 title: 'Habbits to work on',
@@ -74,19 +74,39 @@ body: 'Get a new seat'
     
 //     }
 
-const findNotes = (notes,query)=>{
+// const findNotes = (notes,query)=>{
     
- return notes.filter((note,index)=> {
-        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
-        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
-        return isTitleMatch || isBodyMatch
-    })
+//  return notes.filter((note,index)=> {
+//         const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+//         const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+//         return isTitleMatch || isBodyMatch
+//     })
   
-}
+// }
 
 
 
-console.log(findNotes(notes, 'work'))
+// console.log(findNotes(notes, 'work'))
 
 // const note = findNote (notes,'office modification')
 // console.log(note)
+
+
+// sort my array by the alphab of titles
+
+const sortNotes = (notes)=>{
+ notes.sort((a,b)=>{
+        if(a.title.toLowerCase()<b.title.toLowerCase()){
+            return -1
+        } else if (b.title.toLowerCase()<a.title.toLowerCase()){
+            return 1
+        } else {
+            return 0
+        }
+ })
+}
+
+
+sortNotes(notes)
+console.log(notes)
+

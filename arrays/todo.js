@@ -35,24 +35,47 @@ const todos = [{
     completed:false
                     }]
 
-const deleteTodo=(todos,textTodo)=>{
+// const deleteTodo=(todos,textTodo)=>{
 
-    const findTodo = todos.findIndex((todo,index)=>{
-        return todo.todo.toLowerCase() === textTodo.toLowerCase()
-    })
-   if(findTodo > -1){
-       todos.splice(findTodo , 1)
-   }
-
-
-
-}
+//     const findTodo = todos.findIndex((todo,index)=>{
+//         return todo.todo.toLowerCase() === textTodo.toLowerCase()
+//     })
+//    if(findTodo > -1){
+//        todos.splice(findTodo , 1)
+//    }
 
 
-const completedTodo = todos.filter((todo,inedx)=> todo.completed === true)
-console.log(completedTodo)
+
+// }
+
+
+// const completedTodo = todos.filter((todo,inedx)=> todo.completed === true)
+// console.log(completedTodo)
 
 
 
 // deleteTodo(todos, 'Sleep')
 // console.log(todos)
+
+
+
+
+const sortTodos = (todos) =>{
+
+    todos.sort((a,b)=>{
+        if(!a.completed && b.completed){
+            return -1
+        }  else return 0
+ })
+}
+
+
+
+
+
+
+
+
+
+sortTodos(todos)
+console.log(todos)
