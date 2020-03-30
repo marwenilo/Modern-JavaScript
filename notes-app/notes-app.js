@@ -27,6 +27,9 @@ const notes = [{
 
 
 
-document.querySelector('button').addEventListener('click',(e)=>{
+document.querySelector('#create-note').addEventListener('click',(e)=>{
    e.target.textContent = "The Buttn was clicked"
+})
+document.querySelector('#remove-all').addEventListener('click', ()=>{
+      document.querySelectorAll('.note').forEach(note=>note.remove())
 })

@@ -39,6 +39,6 @@ const todos = [{
 // )
 // )
 
-document.querySelector('button').addEventListener('click',(e)=>{
+document.querySelector('#add-todo').addEventListener('click',(e)=>{
    console.log("this btn was clicked")
 })
