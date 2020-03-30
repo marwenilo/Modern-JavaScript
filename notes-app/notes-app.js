@@ -14,12 +14,19 @@ const notes = [{
 // p.remove()
 
 //Query all and remove
-const ps = document.querySelectorAll('p')
-ps.forEach(p=>{
-   p.textContent="*****"
-})
+// const ps = document.querySelectorAll('p')
+// ps.forEach(p=>{
+//    p.textContent="*****"
+// })
 
 //add a new element
-const newParg = document.createElement('p')
-newParg.textContent = "teesssttt 3"
-document.querySelector('body').appendChild(newParg)
+// const newParg = document.createElement('p')
+// newParg.textContent = "teesssttt 3"
+// document.querySelector('body').appendChild(newParg)
+
+
+
+
+document.querySelector('button').addEventListener('click',(e)=>{
+   e.target.textContent = "The Buttn was clicked"
+})
